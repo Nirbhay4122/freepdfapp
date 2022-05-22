@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HOME | Get All engineering and Entrance test related paper in pdf form from here</title>
+
+</head>
+
+<body>
+    <header class="header_content">
+        <div>
+            <a href="home" class="link_text">free pdf</a>
+        </div>
+        <div>
+            <!-- signup form and btn is here -->
+            <button class="acc_btn" onclick="opensignupform()">Signup</button>
+            <div class="popup">
+                <div class="pop-window" id="signup-form">
+                    <div class="form-container">
+                        <div class="login-form">
+                            <!-- close button starts -->
+                            <div class="upcontent">
+                                <h2>Create Account</h2>
+                                <button class="icon" onclick="closesignupform()" title="close">
+                                    <span class="bar-1">
+                                        <span class="bar-2"></span>
+                                    </span>
+                                </button>
+                            </div>
+                            <!-- close button end -->
+                            <form action="" class="main-form">
+                                <label for="email">Email :</label>
+                                <input type="email" placeholder="Enter email" name="email" required>
+                                <label for="password">Password :</label>
+                                <input type="password" placeholder="Enter password" required>
+                                <label for="password">Confirm Password :</label>
+                                <input type="password" placeholder="Re Enter password" required>
+                                <input type="submit" value="Login">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Login form and btn is here -->
+                <button class="acc_btn" onclick="openloginform()">Login</button>
+                <div class="popup">
+                    <div class="pop-window" id="login-form">
+                        <div class="form-container">
+                            <div class="login-form">
+                                <!-- close button starts -->
+                                <div class="upcontent">
+                                    <h2>Login</h2>
+                                    <button class="icon" onclick="closeloginform()" title="close">
+                                        <span class="bar-1">
+                                            <span class="bar-2"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <!-- close button end -->
+                                <form action="" class="main-form">
+
+                                    <label for="email">Email :</label>
+                                    <input type="email" placeholder="Enter email" name="email" required>
+                                    <label for="password">Password :</label>
+                                    <input type="password" placeholder="Enter password" required>
+                                    <input type="submit" value="Login">
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    // sign up form scripts
+                    function opensignupform() {
+                        document.getElementById("signup-form").style.display = "block"
+                    }
+                    function closesignupform() {
+                        document.getElementById("signup-form").style.display = "none"
+                    }
+                    // login form scripts
+                    function openloginform() {
+                        document.getElementById("login-form").style.display = "block"
+                    }
+                    function closeloginform() {
+                        document.getElementById("login-form").style.display = "none"
+                    }
+
+                </script>
+            </div>
+    </header>
+    <!-- Navigation bar start here -->
+
+    <ul class="mainnav">
+        <!-- main box start here -->
+        <div class="navbtn">
+            <div class="cross">&#9776;</div>
+            <div class="main-box">
+                <li class="dropdown">
+                    <a href="home" class="dropbtn"><i class="fa fa-home" style="margin-right: 5px;"></i>Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Engineering College</a>
+                    <div class="dropdown_content">
+                        <a href="bhu">BHU</a>
+                        <a href="#">Allahabad University</a>
+                        <a href="#">Delhi University</a>
+                        <a href="#">Lucknow University</a>
+                        <a href="#">Hansraj University</a>
+                        <a href="#">MGKVP University</a>
+                        <a href="#">Gujrat University</a>
+                        <a href="#">Goa University</a>
+                        <a href="#">Rajasthan University</a>
+                        <a href="#">Gujarat vidyapeeth</a>
+                        <a href="#">gurunanak dev University</a>
+                        <a href="#">kalinga University</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">IIT College</a>
+                    <div class="dropdown_content">
+                        <a href="#">IIT Madras</a>
+                        <a href="#">IIT Delhi</a>
+                        <a href="#">IIT Bombay</a>
+                        <a href="#">IIT Kanpur</a>
+                        <a href="#">IIT Kharagpur</a>
+                        <a href="#">IIT Roorkee</a>
+                        <a href="#">IIT Guwahati</a>
+                        <a href="#">IIT Hyderabad</a>
+                        <a href="#">IIT Dhanbad</a>
+                        <a href="#">IIT Indore</a>
+                        <a href="#">IIT (BHU) Varanasi</a>
+                        <a href="#">IIT Ropar</a>
+                        <a href="#">IIT Patna</a>
+                        <a href="#">IIT Gandhinagar</a>
+                        <a href="#">IIT Bhubaneswar</a>
+                        <a href="#">IIT Mandi</a>
+                        <a href="#">IIT Jodhpur</a>
+                        <a href="#">IIT Tirupati</a>
+                        <a href="#">IIT Bhilai</a>
+                        <a href="#">IIT Goa</a>
+                        <a href="#">IIT Jammu</a>
+                        <a href="#">IIT Dharwad</a>
+                        <a href="#">IIT Palakkad</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">NIT College</a>
+                    <div class="dropdown_content">
+                        <a href="#">Movie</a>
+                        <a href="#">Movie</a>
+                        <a href="#">Movie</a>
+                        <a href="#">Movie</a>
+                        <a href="#">Movie</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </ul>
+
+    <!-- Navigation bar end here -->
+    <div class="main_container">
+        <!-- box-1 -->
+        <div class="top-box1">
+            <h1>Get Ready to Learn</h1>
+            <p>Get Here Every Entrance Exam PDF</p>
+        </div>
+    </div>
+    <svg style="background-color:#96D4D4" width="100%" height="70" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,0  L110,0C35,150 35,0 0,100z" fill="#000000"></path>
+    </svg>
+    <div class="down_container">
+        <!-- buttons for pages added here -->
+        <div class="containerforbtn">
+            <div><a href="bhu" class="pagebtn bhu">Banaras Hindu University</a></div>
+            <div><a href="" class="pagebtn du">Delhi University</a></div>
+            <div><a href="" class="pagebtn allahabad">Allahabad University</a></div>
+        </div>
+        <!-- suggession box coading started here -->
+        <div class="suggession_container">
+            <div class="sugession_box">
+                <h3 style="margin-top: 0px;">Suggest Us :</h3>
+                <textarea name="message" cols="40" rows="11"></textarea>
+                <input type="submit" name="submit" value="submit" class="sub_btn">
+            </div>
+        </div>
+        <!-- end of sugession box -->
+    </div>
+    <!-- Engineering college detailed -->
+    <div class="eng_colleges">
+        <!-- This container is made for bachler's degree and post graduate degree -->
+        <!-- Heading for topic -->
+        <div class="eng_heading br4px" style="background-color: #F3ECEA;">Engineering Colleges Entrance test pdf</div>
+        <!-- end heading -->
+
+        <!-- First row -->
+
+        <div>
+            <a href="bhu" class="clg_btn_box br4px cl-skyblue">BHU</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-pink">Allahabad University</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-yellow">gurunanak dev University</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightgreen">kalinga University</a>
+        </div>
+        <!-- second row -->
+
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightorange">Loyola College</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-skyblue">Gargi College</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-pink">Jai Hind College</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-yellow">University of Mumbai</a>
+        </div>
+
+        <!-- Third row  -->
+
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightgreen">Gujarat vidyapeeth</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightorange">Rajasthan University</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-skyblue">Goa University</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-pink">Gujrat University</a>
+        </div>
+
+        <!-- Fourth row  -->
+
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-yellow">MGKVP University</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightgreen">Hansraj University</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightorange">Lucknow University</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-skyblue">Delhi University</a>
+        </div>
+
+    </div>
+    <!-- Here jam entrance exam container start -->
+    <!-- Heading for topic -->
+    <div class="clg_btn_other">
+        <div class="eng_heading-jam br4px" style="background-color: #D9EEE1;">Other Entrance Exam Question Paper</div>
+        <!-- first row -->
+        <div>
+            <a href="jam" class="clg_btn_box br4px cl-lightsky">IIT JAM</a>
+        </div>
+        <div>
+            <a href="neet" class="clg_btn_box br4px cl-lightblue">NEET</a>
+        </div>
+        <!-- Second row -->
+        <div>
+            <a href="nimcet" class="clg_btn_box br4px cl-purple">NIMCET</a>
+        </div>
+        <div>
+            <a href="aimcet" class="clg_btn_box br4px cl-lightsky">AIMCET</a>
+        </div>
+        <!-- third row -->
+        <div>
+            <a href="jee" class="clg_btn_box br4px cl-lightblue">IIT JEE</a>
+        </div>
+        <div>
+            <a href="gate" class="clg_btn_box br4px cl-purple">GATE</a>
+        </div>
+
+    </div>
+    <!-- IIT JAM End here -->
+    <!-- IIT college container starts here -->
+    <div class="iit_clg">
+        <!-- This container is used for IIT colleges -->
+
+        <div class="eng_heading-jam br4px" style="background-color: #fffacf;">IIT Colleges Entrance test pdf</div>
+
+        <!-- First row -->
+
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-skyblue">IIT (BHU) Varanasi</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-pink">IIT Madras</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-yellow">IIT Delhi</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-skyblue">IIT Bombay</a>
+        </div>
+        <!-- second row -->
+
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightgreen">IIT Kanpur</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-yellow">IIT Kharagpur</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-pink">IIT Roorkee</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-lightgreen">IIT Guwahati</a>
+        </div>
+
+        <!-- Third row  -->
+
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-skyblue">IIT Hyderabad</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-pink">IIT Dhanbad</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-yellow">IIT Indore</a>
+        </div>
+        <div>
+            <a href="#" class="clg_btn_box br4px cl-skyblue">IIT Ropar</a>
+        </div>
+
+    </div>
+
+    <!-- Auto scroll button -->
+    <!-- <a href="#Home" class="scroll_btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></a> -->
+
+    <!-- here footer started -->
+
+    <footer class="footer_content">
+
+        <div class="up_content">
+            <div class="left_content">Footer</div>
+            <div class="middle_content">Footer</div>
+            <div class="right_content">Footer</div>
+        </div>
+
+        <div class="down_content">
+            <p>&#169 All rights reserved 2022 | Made by : Nirbhay Singh</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

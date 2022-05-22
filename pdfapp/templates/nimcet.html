@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/colleges.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/faece1f3dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JAM | Get here jam entrance exam related pdf content</title>
+</head>
+
+<body>
+    <!-- Header starts here -->
+    <header class="header_content">
+        <div>
+            <a href="home" class="link_text">free pdf</a>
+        </div>
+        <div>
+            <!-- signup form and btn is here -->
+            <button class="acc_btn" onclick="opensignupform()">Signup</button>
+            <div class="popup">
+                <div class="pop-window" id="signup-form">
+                    <div class="form-container">
+                        <div class="login-form">
+                            <!-- close button starts -->
+                            <div class="upcontent">
+                                <h2>Create Account</h2>
+                                <button class="icon" onclick="closesignupform()" title="close">
+                                    <span class="bar-1">
+                                        <span class="bar-2"></span>
+                                    </span>
+                                </button>
+                            </div>
+                            <!-- close button end -->
+                            <form action="" class="main-form">
+                                <label for="email">Email :</label>
+                                <input type="email" placeholder="Enter email" name="email" required>
+                                <label for="password">Password :</label>
+                                <input type="password" placeholder="Enter password" required>
+                                <label for="password">Confirm Password :</label>
+                                <input type="password" placeholder="Re Enter password" required>
+                                <input type="submit" value="Login">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Login form and btn is here -->
+                <button class="acc_btn" onclick="openloginform()">Login</button>
+                <div class="popup">
+                    <div class="pop-window" id="login-form">
+                        <div class="form-container">
+                            <div class="login-form">
+                                <!-- close button starts -->
+                                <div class="upcontent">
+                                    <h2>Login</h2>
+                                    <button class="icon" onclick="closeloginform()" title="close">
+                                        <span class="bar-1">
+                                            <span class="bar-2"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <!-- close button end -->
+                                <form action="" class="main-form">
+                                    <label for="email">Email :</label>
+                                    <input type="email" placeholder="Enter email" name="email" required>
+                                    <label for="password">Password :</label>
+                                    <input type="password" placeholder="Enter password" required>
+                                    <input type="submit" value="Login">
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    // sign up form scripts
+                    function opensignupform() {
+                        document.getElementById("signup-form").style.display = "block"
+                    }
+                    function closesignupform() {
+                        document.getElementById("signup-form").style.display = "none"
+                    }
+                    // login form scripts
+                    function openloginform() {
+                        document.getElementById("login-form").style.display = "block"
+                    }
+                    function closeloginform() {
+                        document.getElementById("login-form").style.display = "none"
+                    }
+
+                </script>
+            </div>
+    </header>
+    <!-- Header ends here -->
+    <!-- Navigation bar start here -->
+
+    <ul class="mainnav">
+        <!-- main box start here -->
+        <div class="navbtn">
+            <div class="cross">&#9776;</div>
+            <div class="main-box">
+                <li class="dropdown">
+                    <span class="active">Years Wise Paper<i class="fa fa-caret-right"></i></span>
+                </li>
+                {% for i in years %}
+
+                <li class="dropdown"><a href="/freepdf/jam?year={{i.year}}" class="dropbtn">{{i.year}}</a></li>
+
+                {% endfor %}
+            </div>
+        </div>
+    </ul>
+
+    <!-- nabar ends here -->
+
+    <!-- main container start here -->
+    <div class="maincontent">
+        <div class="element_container">
+            <!-- uet table starts here -->
+            <div class="pdf_content">
+                <div class="heading">NIMCET Paper</div>
+                <table class="pdf_table">
+                    <tr>
+                        <th>Year</th>
+                        <th>Courses</th>
+                    </tr>
+                    {% for i in data %}
+
+                    {% if i.section == 'nimcet' %}
+
+                    <tr>
+                        <td style="text-transform: uppercase;">{{i.section}} {{i.year}}</td>
+                        <td style="text-transform: uppercase;">{{i.course}}
+                            <a href="/media/{{i.file}}">
+                                <i class="fa-solid fa-download faicon"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                    {% endif %}
+
+                    {% endfor %}
+                </table>
+                <div class="down-bar"></div>
+            </div>
+            <!-- table ends here -->
+        </div>
+    </div>
+    <!-- Footer start here -->
+
+    <footer class="footer_content">
+
+        <div class="down_content">
+            <p>&#169 All rights reserved 2022 | Made by : Nirbhay Singh</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

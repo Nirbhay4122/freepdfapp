@@ -1,0 +1,991 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* main header */
+.header_content {
+  padding: 10px;
+  padding-left: 25px;
+  background-color: #d9eee1;
+  display: flex;
+}
+
+.header_content div {
+  /* border: 1px solid #000; */
+  flex: 50%;
+}
+
+/* main link free pdf */
+.link_text {
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #04aa6d;
+  text-shadow: 4px 2px 5px rgb(0 0 0 / 30%);
+}
+
+.link_text:hover {
+  color: #04945f;
+}
+
+/* account btn design */
+.acc_btn {
+  padding: 1.5% 3%;
+  margin: 2%;
+  background-color: #04aa6d;
+  color: white;
+  border-radius: 24px;
+  font-size: 1rem;
+  float: right;
+  border: 4px solid white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+    0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+/* hover effect to login and signup btn */
+.acc_btn:hover {
+  background-color: #04945f;
+}
+
+/* login form start here */
+
+.pop-window {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, rgb(166, 0, 255, 0.6), rgb(0, 106, 255, 0.6));
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 2px solid #fff; */
+}
+
+.login-form {
+  width: 240px;
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+  border-radius: 10px;
+  z-index: 9;
+  -webkit-animation: zoomform 0.6s;
+  animation: zoomform 0.6s;
+}
+
+@-webkit-keyframes zoomform {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoomform {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.main-form {
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main-form label {
+  font-size: 14px;
+}
+
+.login-form form input[type='email'],
+input[type='password'] {
+  width: 100%;
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 8px 0px;
+  font-size: 14px;
+}
+
+.login-form form input[type='submit'] {
+  width: 100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(to right, rgb(166, 0, 255, 0.6), rgb(0, 106, 255, 0.7));
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.close {
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.upcontent {
+  position: relative;
+  text-align: center;
+  margin-top: -20px;
+  /* border: 1px solid red; */
+}
+
+.icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -5px;
+  right: -5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  /* background-color: transparent; */
+}
+
+.bar-1 {
+  display: block;
+  background-color: #888;
+  width: 17px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.bar-2 {
+  display: block;
+  background-color: #888;
+  width: 17px;
+  height: 2px;
+  transform: rotate(90deg);
+}
+
+.icon:hover .bar-1 {
+  background-color: rgb(255, 0, 0);
+}
+
+.icon:hover .bar-2 {
+  background-color: rgb(255, 0, 0);
+}
+
+/* login form end here */
+
+/* Here start navigation bars design */
+
+.mainnav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #d9eee1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-box {
+  display: block;
+}
+
+.dropdown {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+.dropbtn {
+  display: inline-block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.1vh;
+}
+
+.dropbtn:hover {
+  background-color: #04aa6d;
+  color: #fff;
+}
+
+.dropdown_content {
+  display: none;
+  min-width: 230px;
+  text-align: left;
+  position: absolute;
+  background-color: #d9eee1;
+  z-index: 1;
+  height: 250px;
+  overflow: auto;
+}
+
+/* design for scroll bar */
+.dropdown_content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dropdown_content::-webkit-scrollbar-track {
+  background-color: #d3cfcf;
+}
+
+.dropdown_content::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.dropdown_content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* end design for dcrollbar */
+.dropdown_content a {
+  display: block;
+  padding: 14px 16px;
+  color: #000;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.1vh;
+  border-top: 0.5px solid #c4c0c0;
+}
+
+.dropdown_content a:hover {
+  background-color: #04aa6d;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.cross {
+  display: none;
+  float: left;
+  height: 22px;
+  width: 20px;
+  padding: 10px;
+  background-color: #04aa6d;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .mainnav {
+    background-color: #04aa6d;
+  }
+
+  .dropdown {
+    float: none;
+  }
+
+  .dropdown_content {
+    position: relative;
+    background-color: #c6cac2;
+  }
+
+  .dropbtn {
+    width: 100%;
+    border-top: 1px solid #fff;
+    color: #fff;
+  }
+
+  .dropbtn:hover {
+    background-color: #d9eee1;
+    color: #000;
+  }
+
+  .cross {
+    display: block;
+  }
+
+  .main-box {
+    display: none;
+  }
+
+  .navbtn:hover .main-box {
+    display: block;
+  }
+}
+
+/* here ends navigation bars design and header  */
+
+/* code for main container */
+
+.main_container {
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* height: 300px; */
+}
+
+.main_container .top-box1 {
+  align-self: center;
+  padding: 20px;
+}
+
+.main_container .top-box1 h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-shadow: 4px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.main_container .top-box1 p {
+  color: #4bf2b5;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: -30px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+/* svg design */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.down_container {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #96d4d4;
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+/* container btn design */
+.containerforbtn {
+  box-sizing: border-box;
+  width: 50%;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  /* gap: 20px; */
+  /* border: 1px solid red; */
+}
+
+/* BHU btn design */
+.pagebtn {
+  width: 80%;
+  border-radius: 25px;
+  text-decoration: none;
+  padding: 15px 16px;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bhu {
+  background-color: #04aa6d;
+  color: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+    0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.bhu:hover,
+.sub_btn:hover {
+  background-color: #04945f;
+}
+
+/* delhi university btn design */
+.du {
+  color: #000;
+  background-color: #fff4a3;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+    0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.du:hover {
+  background-color: #f5e677;
+}
+
+/* allahabad btn design */
+.allahabad {
+  color: #fff;
+  background-color: #363434;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+    0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.allahabad:hover {
+  background-color: #000;
+}
+
+/* suggession box design  start*/
+.suggession_container {
+  box-sizing: border-box;
+  width: 50%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  /* padding: 50px; */
+  /* border: 1px solid red; */
+}
+
+.sugession_box {
+  height: 320px;
+  width: 460px;
+  background-color: #e7e9eb;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 17%),
+    0 2px 10px 0 rgb(0 0 0 / 13%);
+  /* border: 1px solid red; */
+}
+
+/* sugession textarea style  */
+.sugession_box textarea {
+  border-left: 4px solid #04aa6d;
+  border-radius: 6px;
+  width: 450px;
+  height: 215px;
+}
+
+.sugession_box textarea:focus {
+  outline: 0px;
+}
+
+/* suggestion end */
+h1,
+h2,
+h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+
+/* submit button style */
+.sub_btn {
+  border: none;
+  border-radius: 25px;
+  background-color: #04aa6d;
+  margin-top: 15px;
+  width: 135px;
+  padding: 10px 16px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* sugession box design end */
+
+/* Engineering college design 282a35*/
+.eng_colleges {
+  background-color: #282a35 !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 50px;
+  gap: 50px;
+}
+
+/* eng heading design */
+.eng_heading {
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  grid-column: 1 / span 4;
+}
+
+/* end of Engineering college design */
+
+/* college btn color design */
+
+.cl-pink {
+  background-color: #FFC0C7;
+}
+
+.cl-pink:hover {
+  opacity: 0.9;
+}
+
+.cl-lightorange {
+  background-color: #F3ECEA;
+}
+
+.cl-lightorange:hover {
+  opacity: 0.9;
+}
+
+.cl-skyblue {
+  background-color: #96D4D4;
+}
+
+.cl-skyblue:hover {
+  opacity: 0.9;
+}
+
+.cl-lightgreen {
+  background-color: #D9EEE1;
+}
+
+.cl-lightgreen:hover {
+  opacity: 0.9;
+}
+
+.cl-yellow {
+  background-color: #FFF4A3;
+}
+
+.cl-yellow:hover {
+  opacity: 0.9;
+}
+
+/* color design of other exam btn  */
+
+.cl-lightsky {
+  background-color: #c4fffefa;
+}
+
+.cl-lightsky:hover {
+  opacity: 0.9;
+}
+
+.cl-lightblue {
+  background-color: #b0e8ff;
+}
+
+.cl-lightblue:hover {
+  opacity: 0.9;
+}
+
+.cl-purple {
+  background-color: #eee7ff;
+}
+
+.cl-purple:hover {
+  opacity: 0.9;
+}
+
+.cl-grassy {
+  background-color: #bdffcb;
+}
+
+.cl-grassy:hover {
+  opacity: 0.9;
+}
+
+/* end */
+
+/* color design ends here */
+
+/* college btn box design */
+.clg_btn_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  height: 122px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+    0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.clg_btn_other {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  background-color: #04945f;
+  padding: 50px;
+}
+
+.clg_btn_other .clg_btn_box {
+  height: 200px;
+}
+
+.eng_heading-jam {
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  grid-column: 1 / span 2;
+}
+
+/* Other entrance exam design */
+/* IIT college design here */
+.iit_clg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
+  background-color: #282a35 !important;
+}
+
+/* Scroll btn */
+.scroll_btn {
+  position: fixed;
+  border-radius: 5px;
+  right: 20px;
+  bottom: 20px;
+  text-decoration: none;
+  color: white;
+  z-index: 2;
+  height: 25px;
+  width: 30px;
+  padding: 10px;
+  background-color: rgb(189, 19, 189);
+  box-shadow: 0px 3px 7px rgba(171, 12, 171, 0.8);
+  text-align: center;
+  font-size: 20px;
+}
+
+/* This code is for footer content */
+
+.footer_content {
+  width: 100%;
+  float: left;
+  background-color: #363636;
+}
+
+/* Up content design starts here */
+
+.up_content {
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 400px; */
+  /* background-color: #04aa6d; */
+}
+
+.left_content {
+  padding: 20px;
+  width: 25%;
+  height: 250px;
+  background-color: lightpink;
+  box-sizing: border-box;
+}
+
+.middle_content {
+  padding: 20px;
+  width: 25%;
+  height: 250px;
+  background-color: lightgreen;
+  box-sizing: border-box;
+}
+
+.right_content {
+  padding: 20px;
+  width: 50%;
+  height: 250px;
+  background-color: lightblue;
+  box-sizing: border-box;
+}
+
+/* Down content design start here */
+
+.down_content {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.down_content p {
+  color: #ccc4c4;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Footer coading end */
+
+/* Responsive */
+/* Coding start for Responsive */
+/* Responsive */
+/* for tablet potrait view */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait) {
+  .eng_colleges {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    width: auto;
+  }
+
+  .eng_heading {
+    grid-column: 1 / span 3;
+  }
+
+  .down_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .containerforbtn {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .containerforbtn div {
+    width: 470px;
+    justify-self: center;
+  }
+
+  .pagebtn {
+    width: 100%;
+  }
+
+  .suggession_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sugession_box {
+    margin: 0px;
+    width: 70%;
+    height: 300px;
+  }
+
+  .sugession_box textarea {
+    width: 98%;
+    height: 200px;
+    font-size: 16px;
+  }
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:landscape) {
+  /* iPad landscape style here */
+
+  .down_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .containerforbtn {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .containerforbtn div {
+    width: 470px;
+    justify-self: center;
+  }
+
+  .pagebtn {
+    width: 100%;
+  }
+
+  .suggession_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sugession_box {
+    margin: 0px;
+    width: 70%;
+    height: 300px;
+  }
+
+  .sugession_box textarea {
+    width: 98%;
+    height: 200px;
+    font-size: 16px;
+  }
+
+  /* engineering college design */
+  .eng_colleges {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+    width: auto;
+  }
+
+  .eng_heading {
+    grid-column: 1 / span 4;
+  }
+
+  .clg_btn_box_1 {
+    font-weight: 600;
+    height: 100px;
+  }
+
+  .clg_btn_box {
+    font-weight: 600;
+    height: 100px;
+  }
+
+  /* In footer responsive */
+
+}
+
+
+/* tablet view end */
+
+@media screen and (max-width: 800px) {
+  /* design for scroll bar */
+
+  .dropdown_content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* This is for responsive for header content*/
+
+  .header_content {
+    padding: 18px;
+    padding-left: 5px;
+  }
+
+  .link_text {
+    font-size: 35px;
+    margin-left: 5px;
+  }
+
+  .acc_btn {
+    padding: 3% 3%;
+    border: 3px solid #fff;
+    border-radius: 10px;
+  }
+
+  /* making downcontainer responsive */
+
+  /* main container */
+  .main_container .top-box1 h1 {
+    font-size: 3rem;
+  }
+
+  .main_container .top-box1 p {
+    margin-top: 0px;
+    font-size: 16px;
+
+  }
+
+  /* end main container */
+
+  .down_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 70px;
+    padding: 30px;
+  }
+
+  .containerforbtn {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .containerforbtn div {
+    width: 100%;
+  }
+
+  .pagebtn {
+    width: 100%;
+  }
+
+  .suggession_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sugession_box {
+    width: 100%;
+    height: 250px;
+  }
+
+  .sugession_box textarea {
+    width: 100%;
+    height: 150px;
+  }
+
+  /* engineering college design */
+  .eng_colleges {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .eng_heading {
+    grid-column: 1 / span 1;
+    height: auto;
+    padding: 15px;
+  }
+
+  .clg_btn_box {
+    font-weight: 600;
+    height: 130px;
+  }
+
+  /* other college */
+  .eng_heading-jam {
+    grid-column: 1 / span 1;
+  }
+
+  .clg_btn_other {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  /* iit college  */
+  .iit_clg {
+    grid-template-columns: 1fr;
+  }
+
+  /* In footer responsive */
+
+  .down_content {
+    padding: 8px;
+  }
+
+  .down_content p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* End Responsive */
+
+/* some short css use */
+.br4px {
+  border-radius: 4px;
+}

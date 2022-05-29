@@ -1,4 +1,4 @@
 # freepdfapp
 this is my final repo of this project
 
-# checkout freepdf webapp project on branch Master
+# checkout freepdf webapp project on Master branch

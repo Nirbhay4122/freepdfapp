@@ -1,7 +1,6 @@
 # freepdfapp
 
-# Checkout =>>
+
+To review the code Checkout the >>>
 
 # Master branch
-
-To review the code.

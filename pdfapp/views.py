@@ -11,7 +11,6 @@ def index(request):
 
 
 def bhu(request):
-    hello
     years = list(pdfinfo.objects.order_by().filter(
         college='bhu').values('year').distinct())
     if request.GET:

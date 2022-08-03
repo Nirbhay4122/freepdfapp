@@ -1055,6 +1055,18 @@ h3 {
     gap: 20px;
   }
 
+  .middle_content .dwbd i {
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .middle_content .dwbd i:hover {
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+  }
+
   .right_content {
     display: none;
   }

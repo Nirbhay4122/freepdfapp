@@ -524,7 +524,7 @@ h3 {
 
 /* end of Engineering college design */
 
-/* college btn color design */
+/* college btn color design */ 
 
 .cl-pink {
   background-color: #FFC0C7;
@@ -688,26 +688,94 @@ h3 {
 }
 
 .left_content {
+  display: block;
   padding: 20px;
   width: 25%;
-  height: 250px;
-  background-color: lightpink;
+  background-color: #363636;
+  color: #fff;
   box-sizing: border-box;
 }
 
 .middle_content {
   padding: 20px;
-  width: 25%;
-  height: 250px;
-  background-color: lightgreen;
+  width: 50%;
+  background-color: #363636;
+  color: #fff;
   box-sizing: border-box;
+  text-align: center;
 }
 
+.middle_content div {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.middle_content .upbd {
+  letter-spacing: 0.1rem;
+  font-size: 25px;
+}
+
+.middle_content .upbd span {
+  padding: 5px;
+  /* width: 180px; */
+  display: block;
+  border-bottom: 1px solid #fff;
+}
+
+.middle_content .dwbd {
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+/* Contsacts icons */
+.middle_content .dwbd i {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: #000;
+  height: 40px;
+  width: 40px;
+  transition: 0.4s;
+}
+.middle_content .dwbd i:hover {
+  height: 50px;
+  width: 50px;
+  font-size: 35px;
+}
+
+.middle_content .dwbd i:nth-child(1) {
+  background-color: #ff4ede;
+  color: #fff;
+}
+
+.middle_content .dwbd i:nth-child(2) {
+  background-color: #33b9ff;
+  color: #fff;
+}
+
+.middle_content .dwbd i:nth-child(3) {
+  background-color: #0082ff;
+  color: #fff;
+}
+
+.middle_content .dwbd i:nth-child(4) {
+  background-color: #1b68be;
+  color: #fff;
+}
+/* Contacts icon end */
+
 .right_content {
+  display: block;
   padding: 20px;
-  width: 50%;
-  height: 250px;
-  background-color: lightblue;
+  width: 25%;
+  background-color: #363636;
+  color: #fff;
   box-sizing: border-box;
 }
 
@@ -716,6 +784,7 @@ h3 {
 .down_content {
   box-sizing: border-box;
   width: 100%;
+  border-top: 1px solid #cccccc38;
 }
 
 .down_content p {
@@ -972,6 +1041,23 @@ h3 {
   }
 
   /* In footer responsive */
+  
+
+  .left_content {
+    display: none;
+  }
+
+  .middle_content {
+    width: 100%;
+  }
+
+  .middle_content .dwbd {
+    gap: 20px;
+  }
+
+  .right_content {
+    display: none;
+  }
 
   .down_content {
     padding: 8px;

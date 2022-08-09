@@ -36,16 +36,6 @@
   color: #fff;
 }
 
-.cross {
-  display: none;
-  float: right;
-  height: 22px;
-  width: 20px;
-  padding: 10px;
-  background-color: #04aa6d;
-  color: #fff;
-}
-
 .active {
   background-color: #282a35;
   color: #fff;
@@ -76,17 +66,6 @@
     width: 100%;
   }
 
-  .cross {
-    display: block;
-  }
-
-  .main-box {
-    display: none;
-  }
-
-  .navbtn:hover .main-box {
-    display: block;
-  }
 }
 
 /* here ends navigation bars design */
@@ -100,7 +79,7 @@
 }
 /* Design for heading */
 .heading {
-  background-color: #ebf0f1;
+  background-color: #cccccc;
   color: #000;
   text-align: center;
   padding: 5px;
@@ -119,7 +98,7 @@
 
 .pdf_content {
   padding: 5px;
-  background-color: #ebf0f1;
+  background-color: #cccccc;
   border-radius: 5px;
 }
 

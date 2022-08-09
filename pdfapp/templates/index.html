@@ -76,23 +76,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    // sign up form scripts
-                    function opensignupform() {
-                        document.getElementById("signup-form").style.display = "block"
-                    }
-                    function closesignupform() {
-                        document.getElementById("signup-form").style.display = "none"
-                    }
-                    // login form scripts
-                    function openloginform() {
-                        document.getElementById("login-form").style.display = "block"
-                    }
-                    function closeloginform() {
-                        document.getElementById("login-form").style.display = "none"
-                    }
-
-                </script>
             </div>
     </header>
     <!-- Navigation bar start here -->
@@ -100,10 +83,16 @@
     <ul class="mainnav">
         <!-- main box start here -->
         <div class="navbtn">
-            <div class="cross">&#9776;</div>
-            <div class="main-box">
+            <div class="cross" onclick="navbarbox()">
+                <div class="hamberg" onclick="hambtn()">
+                    <span id="bar-1" class="bar"></span>
+                    <span id="bar-2"  class="bar"></span>
+                    <span id="bar-3"  class="bar"></span>
+                </div>
+            </div>
+            <div id="navbx" class="main-box">
                 <li class="dropdown">
-                    <a href="home" class="dropbtn"><i class="fa fa-home" style="margin-right: 5px;"></i>Home</a>
+                    <a href="home" class="dropbtn">Home</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Engineering College</a>
@@ -381,6 +370,53 @@
         </div>
 
     </footer>
+
+
+    <!-- Scripts coding starts here -->
+    
+    <script>
+
+        var a = 1;
+        // sign up form scripts
+        function opensignupform() {
+            document.getElementById("signup-form").style.display = "block"
+        }
+        function closesignupform() {
+            document.getElementById("signup-form").style.display = "none"
+        }
+        // login form scripts
+        function openloginform() {
+            document.getElementById("login-form").style.display = "block"
+        }
+        function closeloginform() {
+            document.getElementById("login-form").style.display = "none"
+        }
+
+        // navbar scripts starts here
+        function navbarbox() {
+            const navopen = document.getElementById("navbx").style;
+            const navclose = document.getElementById("navbx").style;
+            const bar1 = document.getElementById("bar-1").style;
+            const bar2 = document.getElementById("bar-2").style;
+            const bar3 = document.getElementById("bar-3").style;
+            if (a==1) {
+                navopen.display = "block";
+                bar1.cssText = "position: absolute; transform: rotate(-45deg); width: 25px;";
+                bar2.display = "none";
+                bar3.cssText = "position: absolute; transform: rotate(45deg); width: 25px;";
+                return a = 0;
+            }else {
+                navclose.display = "none";
+                bar1.cssText = "position: relative; transform: rotate(0deg); width: 100%;";
+                bar2.display = "block";
+                bar3.cssText = "position: relative; transform: rotate(0deg); width: 100%;";
+                return a = 1;
+            }
+        }
+
+    </script>
+
+
 </body>
 
 </html>

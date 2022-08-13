@@ -77,14 +77,7 @@
   .cross {
     display: block;
   }
-
-  .main-box {
-    display: none;
-  }
-
-  .navbtn:hover .main-box {
-    display: block;
-  }
+  
 }
 
 /* here ends navigation bars design */

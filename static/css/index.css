@@ -407,7 +407,6 @@ svg:not(:root) {
   background-color: #96d4d4;
   margin-top: -10px;
   display: flex;
-  flex-wrap: wrap;
   padding: 50px;
 }
 
@@ -485,8 +484,10 @@ svg:not(:root) {
 }
 
 .sugession_box {
-  height: 365px;
-  width: 500px;
+  /* height: 365px; */
+  /* width: 500px; */
+  height: auto;
+  width: 100%;
   background-color: #e7e9eb;
   border-radius: 8px;
   padding: 30px;
@@ -522,10 +523,12 @@ h3 {
   background-color: #04aa6d;
   margin-top: 15px;
   width: 135px;
-  padding: 10px 16px;
+  /* padding: 10px 16px; */
+  padding: 10px;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 /* sugession box design end */
@@ -875,13 +878,14 @@ h3 {
 
   .sugession_box {
     margin: 0px;
-    width: 70%;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    /* height: 300px; */
   }
 
   .sugession_box textarea {
-    width: 98%;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     font-size: 16px;
   }
 
@@ -890,23 +894,23 @@ h3 {
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:landscape) {
   /* iPad landscape style here */
 
-  .down_container {
+  /* .down_container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-  }
+  } */
 
   .containerforbtn {
-    width: 100%;
+    /* width: 100%; */
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 30px;
+    /* gap: 10px; */
+    /* padding: 30px; */
   }
 
   .containerforbtn div {
-    width: 470px;
+    width: 400px;
     justify-self: center;
   }
 
@@ -923,15 +927,19 @@ h3 {
 
   .sugession_box {
     margin: 0px;
-    width: 70%;
-    height: 300px;
+    width: auto;
+    height: auto;
   }
 
   .sugession_box textarea {
-    width: 98%;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     font-size: 16px;
   }
+
+  /* .sub_btn {
+    padding: 28px 20px;
+  } */
 
   /* engineering college design */
   .eng_colleges {
